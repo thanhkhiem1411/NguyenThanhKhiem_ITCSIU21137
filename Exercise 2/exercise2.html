@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2 – 3-Column Fixed-Width Flexbox Layout (Match BG + Bold Sidebars)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5d8a4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .wrapper {
+      width: 1000px;
+      background-color: #fff;
+      border: 1px solid #d8b56a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header, footer {
+      background-color: #f7f3e9;
+      border: 1px solid #d8b56a;
+      padding: 20px;
+      text-align: left;
+      font-weight: bold;
+    }
+    .main-container {
+      flex: 1;
+      display: flex;
+      border-top: 1px solid #d8b56a;
+      border-bottom: 1px solid #d8b56a;
+    }
+    .sidebar {
+      background-color: #faf7ef;
+      width: 200px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #d8b56a;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-weight: bold;   /* make Sidebar A/B bold */
+      color: #444;
+    }
+    .sidebar:last-child {
+      border-right: none;
+      border-left: 1px solid #d8b56a;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #faf7ef; /* same as sidebar */
+      box-sizing: border-box;
+      border-left: 1px solid #d8b56a;
+      border-right: 1px solid #d8b56a;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-weight: bold;  /* keep 'Main Content' bold to match mock */
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Header</header>
+    <div class="main-container">
+      <div class="sidebar">Sidebar A</div>
+      <div class="content">Main Content</div>
+      <div class="sidebar">Sidebar B</div>
+    </div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
